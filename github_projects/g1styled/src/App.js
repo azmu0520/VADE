@@ -1,10 +1,15 @@
 import React from 'react';
-import Main from './pages/Main';
+import Navbar from './Component/Navbar';
+
 import './app.css';
+import SubNav from './Component/SubNav';
+import Body from './Component/Body';
 const App = () => {
   return (
-    <div>
-      <Main />
+    <div className='wrap'>
+      <Navbar />
+      <SubNav />
+      <Body />
     </div>
   );
 };
