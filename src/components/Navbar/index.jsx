@@ -1,8 +1,9 @@
 import React from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import { Wrap } from './style';
 import { data } from '../../utilites/navbar';
 const Navbar = () => {
+  const location = useLocation();
   return (
     <Wrap>
       <Wrap.Nav>
@@ -10,9 +11,15 @@ const Navbar = () => {
 
         <Wrap.Ul>
           {data.map((item) => (
-            <NavLink className='nav' to={item.path}>
-              <Wrap.Li key={item.id}> {item.title} </Wrap.Li>
-            </NavLink>
+            <Wrap.Li key={item.id}>
+              <Wrap.Link
+                active={(location?.pathname === item.path).toString()}
+                to={item.path}
+                className={({ isActive }) => (isActive ? 'active' : 'inactive')}
+              >
+                {item.title}
+              </Wrap.Link>
+            </Wrap.Li>
           ))}
           <Wrap.Li>
             <Wrap.Menu />
