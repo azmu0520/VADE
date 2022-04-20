@@ -132,7 +132,20 @@ const Card = () => {
           width={show}
           real={1}
         >
-          <div className='layer' />d
+          <Houses.Text width={show} real={1}>
+            <Houses.Title>Lodha Miracles</Houses.Title>
+            <Houses.P> Andheri East, Mumbai</Houses.P>
+            <Houses.P>$ 4350K - 1680K</Houses.P>
+            <Houses.Ul>
+              <Houses.Li>1BHK</Houses.Li>
+              <Houses.Li>2BHK</Houses.Li>
+              <Houses.Li>Rental</Houses.Li>
+            </Houses.Ul>
+          </Houses.Text>
+          <Houses.Bottom width={show} real={1}>
+            Lodha Miracles
+          </Houses.Bottom>
+          <Houses.Layer width={show} real={1} />
         </Houses.Each>
         <Houses.Each
           home={home2}
@@ -140,7 +153,20 @@ const Card = () => {
           width={show}
           real={2}
         >
-          <div className='layer' />d
+          <Houses.Text width={show} real={2}>
+            <Houses.Title>Lodha Miracles</Houses.Title>
+            <Houses.P> Andheri East, Mumbai</Houses.P>
+            <Houses.P>$ 150K - 380K</Houses.P>
+            <Houses.Ul>
+              <Houses.Li>1BHK</Houses.Li>
+              <Houses.Li>2BHK</Houses.Li>
+              <Houses.Li>Rental</Houses.Li>
+            </Houses.Ul>
+          </Houses.Text>
+          <Houses.Bottom width={show} real={2}>
+            Lodha Miracles
+          </Houses.Bottom>
+          <Houses.Layer width={show} real={2} />
         </Houses.Each>
         <Houses.Each
           home={home3}
@@ -148,7 +174,7 @@ const Card = () => {
           width={show}
           real={3}
         >
-          <Houses.Text>
+          <Houses.Text width={show} real={3}>
             <Houses.Title>Lodha Miracles</Houses.Title>
             <Houses.P> Andheri East, Mumbai</Houses.P>
             <Houses.P>$ 450K - 680K</Houses.P>
@@ -158,7 +184,10 @@ const Card = () => {
               <Houses.Li>Rental</Houses.Li>
             </Houses.Ul>
           </Houses.Text>
-          <div className='layer' />
+          <Houses.Bottom width={show} real={3}>
+            Lodha Miracles
+          </Houses.Bottom>
+          <Houses.Layer width={show} real={3} />
         </Houses.Each>
       </Houses>
     </Wrap>

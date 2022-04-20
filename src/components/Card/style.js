@@ -304,6 +304,7 @@ export const Houses = styled.div`
 
 Houses.Each = styled.div`
   display: flex;
+  position: relative;
   background-image: ${({ home }) =>
     home
       ? `
@@ -317,26 +318,28 @@ Houses.Each = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: ${({ width, real }) => (width === real ? '60%' : '20%')};
   transition: all 0.7s ease;
-  position: relative;
-  .layer {
-    background-color: ${({ width, real }) =>
-      width === real ? 'rgba(0, 0, 0, 0.2)' : 'rgba(0, 0, 0, 0.8)'};
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-  }
-  /* z-index: -2; */
+`;
+Houses.Layer = styled.div`
+  background: ${({ width, real }) =>
+    width === real ? 'rgba(0, 0, 0, 0.2)' : 'rgba(0, 0, 0, 0.8)'};
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(255, 0, 0, 1); */
+  /* z-index: -1; */
 `;
 
-Houses.Layer = styled.div``;
+// Houses.Layer = styled.div``;
 
 Houses.Text = styled.div`
-  display: flex;
+  visibility: ${({ width, real }) => (width === real ? 'visible' : 'hidden')};
   flex-direction: column;
   width: 323px;
+  margin: 86px 0 0 90px;
+  transition: all 0.6s ease-in-out;
+  z-index: 10;
 `;
 
 Houses.Title = styled.h1`
@@ -345,6 +348,7 @@ Houses.Title = styled.h1`
   line-height: 0;
   letter-spacing: 0.005em;
   color: #ffffff;
+  padding-bottom: 12px;
 `;
 Houses.P = styled.p`
   font-weight: 600;
@@ -352,11 +356,40 @@ Houses.P = styled.p`
   line-height: 0;
   letter-spacing: 0.005em;
   color: #ffffff;
+  padding-bottom: 6px;
 `;
-Houses.Ul = styled.ul`
+Houses.Ul = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   list-style-type: none;
 `;
-Houses.Li = styled.li``;
+Houses.Li = styled.span`
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133.4%;
+  letter-spacing: 0.005em;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.12));
+  border-radius: 29px;
+  /* transform: matrix(1, 0, 0, -1, 0, 0); */
+  padding: 5px 10px;
+`;
+
+Houses.Bottom = styled.div`
+  visibility: ${({ width, real }) => (width === real ? 'hidden' : 'visible')};
+  position: absolute;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 133.4%;
+  letter-spacing: 0.005em;
+  color: #ffffff;
+  margin-top: auto;
+  bottom: 0;
+  left: 50%;
+  white-space: nowrap;
+  transform: translate(-50%);
+  transition: all 0.6s ease-in-out;
+  z-index: 10;
+`;
