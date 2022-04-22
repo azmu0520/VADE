@@ -1,7 +1,8 @@
 import React from 'react';
 import { Wrap } from './style';
 import home from '../../assets/image/home.png';
-import Card from '../Card';
+import Card from './Card';
+import Process from './Process';
 const Home = () => {
   return (
     <>
@@ -19,6 +20,7 @@ const Home = () => {
         <Wrap.Img src={home} />
       </Wrap>
       <Card />
+      <Process />
     </>
   );
 };

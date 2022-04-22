@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import { Wrap, Filter, Houses } from './style';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import lodha from '../../assets/image/lodha.png';
-import prestige from '../../assets/image/prestige.png';
-import brigade from '../../assets/image/brigade.png';
-import sobh from '../../assets/image/sobh.png';
+import lodha from '../../../assets/image/lodha.png';
+import prestige from '../../../assets/image/prestige.png';
+import brigade from '../../../assets/image/brigade.png';
+import sobh from '../../../assets/image/sobh.png';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper';
-import home1 from '../../assets/image/slide-home.png';
-import home2 from '../../assets/image/slide-home2.jpg';
-import home3 from '../../assets/image/slide-home3.jpg';
+import home1 from '../../../assets/image/slide-home.png';
+import home2 from '../../../assets/image/slide-home2.jpg';
+import home3 from '../../../assets/image/slide-home3.jpg';
 
 const Card = () => {
   const [check, setCheck] = useState(false);
