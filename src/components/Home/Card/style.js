@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import { ReactComponent as Arrow } from '../../assets/icons/double-arrow.svg';
-import { ReactComponent as Search } from '../../assets/icons/search.svg';
-import { ReactComponent as Check } from '../../assets/icons/check.svg';
-import lodha from '../../assets/image/slide-home.png';
+import { ReactComponent as Arrow } from '../../../assets/icons/double-arrow.svg';
+import { ReactComponent as Search } from '../../../assets/icons/search.svg';
+import { ReactComponent as Check } from '../../../assets/icons/check.svg';
 
 export const Wrap = styled.div``;
 
